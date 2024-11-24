@@ -1,0 +1,492 @@
+
+
+/* FONTS */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Quicksand:wght@300..700&display=swap');
+
+
+
+h1.alata {
+  font-size: 5rem;
+  text-align: center;
+  color: #b05449;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  } 
+
+
+     
+.heading {
+  font-size: 2rem;
+  color:#b05449;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  
+}
+
+html{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+.paragraph {
+
+  line-height: 2.0rem;
+  font-size: 0.7rem;
+  color: #636663;
+  padding: 0.1rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+#parkready h2{
+  color: #446b04;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-size: 2.0rem;
+}
+
+#parkready .paragraph{
+  color: #446b04;
+  font-size: 1.0rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+
+
+
+/* COLOR SCHEME */
+
+:root {
+  --primaryColor: #dbb238 ;
+  --complementaryColor: #d5c6e0;
+  --brandColor: #b05449;
+}
+
+body{
+ 
+  background-color: var(--complementaryColor);
+ 
+}
+
+#indexhero{
+
+  background-color: var(--primaryColor);
+  border-radius: 15px;
+}
+
+
+/* Layout */
+
+
+/* FLEX CONTAINER */
+
+
+.tx-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+/* Form Table formatting */
+
+.wrapper{
+  width: 60vmin;
+  /* padding: ; */
+  background-color: #e1c1b7;
+  /* position: absolute; */
+  /* transform: -50% -50%; */
+  border-radius: 15px;
+  padding-bottom: 20px;
+  
+}
+
+
+.container{
+  background-color: #d5c6e0;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+#contactdetails ul {
+
+  list-style: none;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 1rem;
+  color: #446b04;
+
+}
+
+/* GRID */
+
+.grid-container{
+  display: grid;
+  gap: 1rem 1rem ;
+  grid-template-columns: repeat(2, 1fr );
+  
+}
+
+/* Emmail and password formats */
+
+.formemail{
+  width: 40%;
+}
+
+.emaillogin input[type=text]{
+  width: 56%;
+  padding: 6px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #446b04;
+  border-radius: 4px;
+  background-color: #d5c6e0;
+}
+
+.passwordlogin input {
+  width: 50%;
+  padding: 6px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #446b04;
+  border-radius: 4px;
+  background-color: #d5c6e0;
+}
+
+
+
+
+.select {
+  width: 100%;
+  padding: 6px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #446b04;
+  border-radius: 4px;
+  background-color: #e1c1b7;
+
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 6px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #446b04;
+  border-radius: 4px;
+  background-color: #d5c6e0;
+}
+
+input[type=email] {
+  width: 70%;
+  padding: 6px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #446b04;
+  border-radius: 4px;
+  background-color: #d5c6e0;
+}
+
+input[type=text]:focus {
+  border: 2px solid #446b04;
+}
+
+input[type=email]:focus {
+  border: 2px solid #446b04;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  border: 2px solid #446b04; 
+  border-radius: 10px;
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #d5c6e0;
+  color: #09280a;
+  align-content: center;
+  justify-content: center;
+}
+
+/* NAVBAR MAIN */
+
+
+
+#navbar  ul {
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+}
+
+#navbar  ul li a {
+  padding: 0rem;
+  align-content: center;
+  list-style: none;
+   
+}
+
+
+#navbar  a {
+  text-decoration: none;
+  
+  
+}
+
+#navbar .flex-container {
+  display: flex;
+  flex-direction: row;
+ gap: 0.5rem;
+ 
+  
+}
+
+
+/* BUTTON & HOVER */
+
+#navbar .btn:hover {
+  /* border: 2px solid #dbb238; */
+  color: #b05449;
+  border: 1px solid #b05449;
+  cursor: pointer; 
+  border-radius: 5px;
+  padding: 3px 6px;
+  
+}
+
+#navbar .btnlogout:hover {
+  /* border: 2px solid #dbb238; */
+  color: #b05449;
+  cursor: pointer; 
+  border: 1px solid #b05449;
+  
+}
+
+#navbar  ul li a:hover { 
+  color: #b05449 ;
+  cursor: pointer; 
+  border: 1px solid #b05449;
+ 
+} 
+
+
+
+/* BUTTON */
+
+.btn {
+
+  
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 0.7em;
+  background-color:  #d5c6e0;
+  color: #446b04;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.btnlogin {
+
+  display: inline-block;
+  font-size: 1em;
+  background-color:  #dbb238;
+  color: #446b04;
+  border: 2px solid #446b04;
+  border-radius: 4px;
+  padding: 20px 25px;
+
+}
+
+.btnlogout {
+
+  display: inline-block;
+  font-size: 1em;
+  background-color:  #dbb238;
+  color: #446b04;
+  border: 2px solid #446b04;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+.btnloginpg {
+
+  display: inline-block;
+  font-size: 1em;
+  background-color:  #d5c6e0;
+  color: #446b04;
+  border: 2px solid #446b04;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+
+}
+
+
+
+/* Alert Warnings */
+
+.alert{
+
+  color: #b05449;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cardimg{
+
+  height: 400px;
+  width: 450px;
+  border-radius: 10px;
+  border: 5px solid #dbb238;
+  margin-top: 20px;
+}
+
+.form-control{
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+
+/* IMAGES */
+
+
+.wavy-box {
+  --s: 25px;  /* control the size of the wave */
+  --w: 450px; /* preferred  width */
+  --c:#446b04;
+  
+  
+  width: round(var(--w),2*var(--s)); 
+  aspect-ratio: 1;
+  padding: var(--s);
+  box-sizing: border-box;
+  border-radius: calc(1.5*var(--s));
+  --R:calc(var(--s)/sqrt(2)) at;
+  --g:radial-gradient(var(--R) 50%,var(--c) calc(100% - 1px),#0000) 
+     0 0/calc(2*var(--s)) calc(2*var(--s));
+  --_c:#0000 100%,var(--c) calc(100% + 1px);
+  --_b:calc(2*var(--s)) calc(51% - var(--s)/2) repeat-x;
+  background: var(--g),
+    radial-gradient(var(--R) 50% calc(100% + var(--s)/2),var(--_c)) 
+     var(--s) calc(100% - var(--s)/2)/var(--_b),
+    radial-gradient(var(--R) 50% calc(      var(--s)/-2),var(--_c)) 
+     var(--s) calc(       var(--s)/2)/var(--_b);
+  --_m:var(--s)/calc(51% - var(--s)/2) calc(2*var(--s)) repeat-y;
+  mask: var(--g),
+    radial-gradient(var(--R) calc(100% + var(--s)/2) 50%,var(--_c))
+     calc(100% - var(--s)/2) var(--_m),
+    radial-gradient(var(--R) calc(      var(--s)/-2) 50%,var(--_c)) 
+     calc(       var(--s)/2) var(--_m);
+}
+
+
+.logomain img{
+
+  height: 30dvh; 
+  width: 33dvh;
+padding-left: 5rem;
+}
+
+
+
+.uprightscissor img{
+
+  height: 40dvh;
+
+}
+
+.whitedog img{
+
+  height: 45dvh;
+  float: left;
+  padding-top: 6rem;
+  
+}
+
+.smalllogo img{
+  height: 12dvh;
+  width: 22dvh;
+}
+
+.logoword img{
+
+  height: 12dvh;
+  width: 45dvh;
+
+}
+
+
+#collie img{
+  height: 50dvh; 
+ float: left;
+}
+
+#newsletter {
+  padding-top: 0;
+}
+
+#location{
+background-color: var(--primaryColor);
+padding: 1rem;
+border-radius: 15px;
+}
+
+/* FOOTER */
+
+#footer .footerstyle  ul {
+  list-style: none ;
+  align-items: center;
+  font-size: 1.5rem;
+  display: flex;
+  text-decoration: none;
+  flex-direction: row;
+
+}
+
+#footer .footerstyle  ul li a {
+  padding: 0.5rem;
+  align-content: center;
+  list-style: none ;
+  
+}
+
+
+#footer .footerstyle  a {
+  text-decoration: none;
+  color: #446b04;
+  list-style: none;
+}
+
+#footer .flex-container {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+ align-self: center;
+  
+}
+
+
+
+
+
+
