@@ -381,7 +381,7 @@ input[type=button], input[type=submit], input[type=reset] {
   padding: var(--s);
   box-sizing: border-box;
   border-radius: calc(1.5*var(--s));
-  --R:calc(var(--s)/sqrt(2)) at;
+  --R:calc(var(--s)/ 1.4) at;
   --g:radial-gradient(var(--R) 50%,var(--c) calc(100% - 1px),#0000) 
      0 0/calc(2*var(--s)) calc(2*var(--s));
   --_c:#0000 100%,var(--c) calc(100% + 1px);

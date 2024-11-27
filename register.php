@@ -37,6 +37,9 @@
       } else if ($_GET['error'] == "usertaken") {
         $errorMsg = "Username already taken &#128556;";
 
+      } else if ($_GET['error'] == "invalidpwd") {
+        $errorMsg = "Invalid password - you need to create a password with at least 1 capital letter, 1 number & 1 special character";
+
         // (vii) Internal server error 
       } else if ($_GET['error'] == "sqlerror") {
         $errorMsg = "An internal server error has occurred - please try again later &#128556;";

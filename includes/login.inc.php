@@ -11,7 +11,7 @@ if (isset($_POST['login-submit'])) {
 
   // 4. Validate data by checking for empty fields (redirect on error)
   if (empty($mailuid) || empty($password)) {
-    header("Location: ../index.php?loginerror=emptyfields");
+    header("Location: ../login.php?error=emptyfields");
     exit();
   }
 
@@ -23,7 +23,7 @@ if (isset($_POST['login-submit'])) {
   $statement = $conn->stmt_init();
   if (!$statement->prepare($sql)) {
     // ERROR: SQL Syntax error
-    header("Location: ../index.php?error=sqlerror");
+    header("Location: ../login.php?error=sqlerror");
     exit();
   }
 
@@ -40,7 +40,7 @@ if (isset($_POST['login-submit'])) {
 
     // (i) ERROR: User exists BUT fails AUTH (Password is NOT a match using bcrypt)
     if (!$pwdCheck) {
-      header("Location: ../index.php?loginerror=wrongpwd");
+      header("Location: ../login.php?error=wrongpwd");
       exit();
 
       // (ii) AUTH SUCCESS: User exists + Password match (init session)
@@ -57,16 +57,17 @@ if (isset($_POST['login-submit'])) {
     }
     // (iv) ERROR: No user was found in DB
   } else {
-    header("Location: ../index.php?loginerror=nouser");
+    header("Location: ../login.php?error=nouser");
     exit();
   }
 
   // 7. We have to close this off - it relates back to our SUBMIT button CHECK
 } else {
   // ERROR: User has NOT submitted the form correctly
-  header("Location: ../index.php?loginerror=forbidden");
+  header("Location: ../login.php?error=forbidden");
   exit();
 }
+
 
 
 ?>

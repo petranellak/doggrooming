@@ -3,27 +3,44 @@
 <?php include './templates/navbar.php' ?>
 
 
+
+
 <?php
 
+require './includes/connection.inc.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "DogGrooming";
+// 1. VALIDATION: If error/success in $_GET - dsiplay appropriate message
+if (isset($_GET['error'])) {
 
-// create connection with database - do database in msql
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// test connection
-
-// if (!$conn) {
-//   die("Connection failed: " . mysqli_connect_error());
-// }
-// echo  "Connection working!";
+  // (i) Empty fields validation 
+  if ($_GET['error'] == "emptyfields") {
+    $errorMsg = "Please fill in all fields &#128520;";
 
 
+    // (ii) 500 ERROR: SQL Error
+  } else if ($_GET['error'] == "sqlerror") {
+    $errorMsg = "Internal server error - please try again later";
 
+    // (iii) uidUsers / emailUsers do not match
+  } else if ($_GET['error'] == "nouser") {
+    $errorMsg = " The user does not exist";
+    // $errorMsg = "Incorrect credentials";
+
+    // (iv) Password does NOT match DB 
+  } else if ($_GET['error'] == "wrongpwd") {
+    $errorMsg = " Wrong password";
+    // $errorMsg = "Incorrect credentials";
+
+    // (iii) loginerror=forbidden
+  } else if ($_GET['error'] == "forbidden") {
+    $errorMsg = "Please submit form correctly";
+  }
+  // ERROR CATCH-ALL: Display alert with dynamic error message
+  echo '<div class="alert alert-danger" role="alert">' . $errorMsg . '</div>';
+} else if (isset($_GET['login']) == "success") {
+  // SUCCESS: User login successful message
+  echo '<div class="alert alert-primary" role="alert">Welcome ' . $_SESSION['userUid'] . '</div>';
+}
 ?>
 
 <div class="container">

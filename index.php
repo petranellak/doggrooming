@@ -9,6 +9,17 @@ if (isset($_SESSION['userId'])) {
 } else {
   echo '<div class="alert" role="alert">You are not logged in! &#128565; </div>';
 }
+
+if (isset($_GET['signup']) == "success") {
+  echo '<div class="alert" role="alert">You have successfully signed up!&#128525;</div>';
+}
+
+if (isset($_GET['login']) == "success") {
+  // SUCCESS: User login successful message
+  echo '<div class="alert alert-primary" role="alert">Welcome ' . $_SESSION['userUid'] . '</div>';
+}
+
+
 ?>
 
 <section id="indexhero">
